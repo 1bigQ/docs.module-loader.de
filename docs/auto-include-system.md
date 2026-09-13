@@ -23,7 +23,7 @@ Wie das Autoinclude System genau funktioniert und wie wir es verwenden können, 
 
 Als Erstes schauen wir uns ein allgemeines Beispiel zum Verständnis an, danach werden wir uns mit einem realen Beispiel beschäftigen, in dem wir die Login-Funktion von modified mit einer Autoinclude-Datei erweitern.
 
-!!! note "Heinweis"
+!!! note "Hinweis"
 
     Die hier aufgeführten Beispiele sind nicht mit einem System Modul verknüpft. Schaue dir den Abschnitt [_"System Module"_](#) an, damit du erfährst, wie du eine Autoinclude-Datei erweiterst, damit diese in Kombination mit einem System Modul arbeitet._
 
@@ -73,7 +73,7 @@ Zu beachten ist das `declare(strict_types = 1);` und dass am Ende der Datei kein
 
     Status: 2 von 5 - Erster Entwurf: Erste Ausformulierung einiger Informationen.
 
-Anhand der `/login.php` wollen wir uns ansehen, wie das _Autoinclude System_ für eine richtige Shop-Funktion funktioniert. Wir wollen `/login.php` so erweitern, dass der Warenkorb des Kunden beim Einloggen nicht wieder hergestellt wird. Dazu schauen wir uns all erstes die Controller-Datei `/login.php` an und überprüfen, an welcher Stelle wir per Autoinclude in das System eingreifen können.
+Anhand der `/login.php` wollen wir uns ansehen, wie das _Autoinclude System_ für eine richtige Shop-Funktion funktioniert. Wir wollen `/login.php` so erweitern, dass der Warenkorb des Kunden beim Einloggen nicht wieder hergestellt wird. Dazu schauen wir uns zuerst die Controller-Datei `/login.php` an und überprüfen, an welcher Stelle wir per Autoinclude in das System eingreifen können.
 
 ```php title="/login.php"
 <?php
@@ -129,7 +129,7 @@ Alle Dateien liegen unter:
 
     Status: 3 von 5 - Verbesserungsbedarf: Dieser Abschnitt könnte besser geschrieben werden.
 
-Da sich die Anzahl der Autoincludes von Version zu Version des modified Systems ändert und immer mal wieder neue hinzukommen, listet dir dieser Text nicht alle möglichen Autoincludes auf. An dieser Stelle möchten wir dir jeodoch erklären, wie du selbst herausfinden kannst, welche Autoincludes dir zur Verfügung stehen.
+Da sich die Anzahl der Autoincludes von Version zu Version des modified Systems ändert und immer mal wieder neue hinzukommen, listet dir dieser Text nicht alle möglichen Autoincludes auf. An dieser Stelle möchten wir dir jedoch erklären, wie du selbst herausfinden kannst, welche Autoincludes dir zur Verfügung stehen.
 
 Wenn du eine IDE oder einen Code-Editor wie VS Code verwendest, in dem du global über dein gesamtes Projekt eine Suche starten kannst, bietet es sich an, nach dem Vorkommen der Zeichenkette 'auto_include' zu suchen, um alle Autoincludes in deiner modified Version zu finden.
 
@@ -141,7 +141,7 @@ Im Wiki von modified gibt es mittlerweile ebenfalls einen Eintrag, der versucht 
 
     Status: 2 von 5 - Erster Entwurf: Erste Ausformulierung einiger Informationen.
 
-Es ist immer sinnvoll, feste Namenskonventionen zu verwenden. Diese solltest du auch auf Autoinclude-Datein anwenden. Das hilft Namenskollisionen mit Bezeichnern aus dem Core und anderen Modulen zu vermeiden und erleichtert das Wiederfinden und Zuordnen von Dateien, da im System verteilt wurden.
+Es ist immer sinnvoll, feste Namenskonventionen zu verwenden. Diese solltest du auch auf Autoinclude-Dateien anwenden. Das hilft Namenskollisionen mit Bezeichnern aus dem Core und anderen Modulen zu vermeiden und erleichtert das Wiederfinden und Zuordnen von Dateien, da im System verteilt wurden.
 
 Wenn Dateien, die zu einem Modul gehören, unterschiedlich benannt wurden, können Entwickler und Anwender, nicht mehr auf den ersten Blick erkennen, zu welchem Modul eine Datei gehört. Möglicherweise lässt sich nicht einmal erkennen, ob die Datei sogar Teil des Cores ist. Besonders wenn ein Modul wieder aus dem System entfernt werden soll, bleibt oft nur der Weg jedes Verzeichnis zu kontrollieren und betroffenen Dateien zu entfernen. Lassen sich die Dateien nicht an ihrem Namen erkennen, ist der Aufwand um ein Vielfaches größer.
 
@@ -175,5 +175,5 @@ Filename: `<Vendorprefix>_<snake_case>.php`
 | snake_case   | `my_first_module`        | `example_module`         |
 | Filename     | `mc_my_first_module.php` | `rth_example_module.php` |
 
-Weitere Informationen zu Namensconventionen findest du unter:
+Weitere Informationen zu Namenskonventionen findest du unter:
 [module-loader.de/docs/naming_convention.php](https://module-loader.de/docs/naming_convention.php)

@@ -25,9 +25,9 @@ Hier ist eine Liste mit guter Literatur zur moderner PHP Programmierung:
 - [PHP Code Quality Tools to Check and Improve your Code](https://thevaluable.dev/code-quality-check-tools-php/)
 - [Open Source Guides](https://opensource.guide)
 
-Hier ist eine Liste mit guten Videos zur modernen PHP Programmierug:
+Hier ist eine Liste mit guten Videos zur modernen PHP Programmierung:
 
-- [PHP for Beginners (2023 Edition) - Youtube](https://www.youtube.com/watch?v=U2lQWR6uIuo&list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC)
+- [PHP for Beginners (2023 Edition) - YouTube](https://www.youtube.com/watch?v=U2lQWR6uIuo&list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC)
 - [Vitalij Mik - Youtube](https://www.youtube.com/@VitalijMik)
 
 Dieser Text versucht dir dennoch Möglichkeiten mit an die Hand zu geben, um moderne PHP Programmierung in deine modified Modulentwicklung mit einfließen zu lassen.

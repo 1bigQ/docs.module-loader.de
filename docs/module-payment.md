@@ -34,7 +34,7 @@ Zur Erstellung einer Payment-Modulklasse legst du eine Moduldatei im Verzeichnis
 				└── payment_mc_my_module.php
 ```
 
-Für einen klaren Überblick über alle verfügbaren Modulklassen und deren erweiterbare Methoden stehen Musterdateien auf [github.com/RobinTheHood/class-extensions](https://github.com/RobinTheHood/class-extensions) und in unserer [Klassen und Schnittstellenfeferenz](/references/module-classes/concrete/payment) zur Verfügung. 
+Für einen klaren Überblick über alle verfügbaren Modulklassen und deren erweiterbare Methoden stehen Musterdateien auf [github.com/RobinTheHood/class-extensions](https://github.com/RobinTheHood/class-extensions) und in unserer [Klassen und Schnittstellenreferenz](/references/module-classes/concrete/payment) zur Verfügung. 
 
 
 Für eine konkrete Umsetzung eines Payment-Moduls und aller dazugehörigen Dateien kannst du einen Blick auf unser Stripe-Modul unter [github.com/RobinTheHood/modified-stripe](https://github.com/RobinTheHood/modified-stripe) werfen. Dieses Beispiel bietet eine praktische Referenz, um die Struktur und die benötigten Dateien für ein funktionierendes Payment-Modul zu verstehen. Dieses Beispiel dient als praktische Referenz und bietet eine umfassende Dokumentation des Quellcodes, um Entwicklern bei der Verständnisbildung zu helfen.
@@ -116,7 +116,7 @@ public function update_status(): void
 
 <h4>Beschreibung</h4>
 
-Diese Methode wird vom System aufgerufen, um zu kontrollieren, ob die Zahlungsart (weiterhin) zur Verfügung steht. Z. B. können Bedingungen, wie Warenwert, Land, Kundenstatus etc. dazu führen, dass eine Zahlart nicht zur Verfühgung stehen soll. Oft wird dazu auf `$order` oder `$xtPrice` per `global` Statement zugegriffen. Als Ergebnis kann die Methode die Klassenvariable `$this->enabled` auf `true` oder `false` setzen.
+Diese Methode wird vom System aufgerufen, um zu kontrollieren, ob die Zahlungsart (weiterhin) zur Verfügung steht. Z. B. können Bedingungen, wie Warenwert, Land, Kundenstatus etc. dazu führen, dass eine Zahlart nicht zur Verfügung stehen soll. Oft wird dazu auf `$order` oder `$xtPrice` per `global` Statement zugegriffen. Als Ergebnis kann die Methode die Klassenvariable `$this->enabled` auf `true` oder `false` setzen.
 
 <h4>Zeitpunkt der Verwendung</h4>
 
@@ -500,7 +500,7 @@ public function javascript_validation(): string
 
 <h4>Beschreibung</h4>
 
-Diese Methode wird vom System aufgerufen, um Javascript in den Header zu laden.
+Diese Methode wird vom System aufgerufen, um JavaScript in den Header zu laden.
 
 // TODO: Die Method macht ...
 
@@ -527,7 +527,7 @@ Es sieht so aus, als würde diese Methode niemals vom modified Core aufgerufen w
 
 <h4>Zeitpunkt der Verwendung</h4>
 
-Diese Methode wird nicht vom modified Core auferufen.
+Diese Methode wird nicht vom modified Core aufgerufen.
 
 ### info()
 

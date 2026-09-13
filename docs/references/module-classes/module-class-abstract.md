@@ -242,7 +242,7 @@ public function install(): void
 
     Status: 2 von 5 - Erster Entwurf: Erste Ausformulierung einiger Informationen. 
 
-Diese Methode wird aufgerufen, wenn der Nutzer im Admin beim Modul auf die Taste "Installieren" klickt. In diesem Moment müssen wir selbst die nötigen Configurationen in der Datenbank anlegen. Wie du das machst, siehst du im folgenden Beispiel:
+Diese Methode wird aufgerufen, wenn der Nutzer im Admin beim Modul auf die Taste "Installieren" klickt. In diesem Moment müssen wir selbst die nötigen Konfigurationen in der Datenbank anlegen. Wie du das machst, siehst du im folgenden Beispiel:
 
 !!! bug "TODO"
 
@@ -335,7 +335,7 @@ public function display(): array
 
 <h4>Beschreibung</h4>
 
-In der Bearbeitungsansicht eines Moduls generiert der modified Core die Eingabefelder für jede Eigenschaft, die mit `function keys(): array` zurückgeben wird. Weitere Eingabefelder oder Buttons wie Speichern oder Abbruch sind nicht vorhanden. Mit der `display()` Methode können beliebe Buttons oder andere beliebige HTML-Ausgaben generiert werden. Sie wird fast immer für die Ausgabe des Save-Buttons verwendet. Die HTML-Ausgabe von `display()` wird in der Reinfolge hinter den Eigenschafte (Keys) dargestellt.
+In der Bearbeitungsansicht eines Moduls generiert der modified Core die Eingabefelder für jede Eigenschaft, die mit `function keys(): array` zurückgeben wird. Weitere Eingabefelder oder Buttons wie Speichern oder Abbruch sind nicht vorhanden. Mit der `display()` Methode können beliebe Buttons oder andere beliebige HTML-Ausgaben generiert werden. Sie wird fast immer für die Ausgabe des Save-Buttons verwendet. Die HTML-Ausgabe von `display()` wird in der Reihenfolge hinter den Eigenschafte (Keys) dargestellt.
 
 ### display_end()
 
@@ -359,7 +359,7 @@ public function display_end(): array
 
 <h4>Beschreibung</h4>
 
-In der Bearbeitungsansicht eines Moduls generiert der modified Core die Eingabefelder für jede Eigenschaft, die mit `function keys(): array` zurückgeben wird. Weitere Eingabefelder oder Buttons wie Speichern oder Abbruch sind nicht vorhanden. Mit der `display()` Methode können beliebe Buttons oder andere beliebige HTML-Ausgaben generiert werden. Sie wird fast immer für die Ausgabe des Save-Buttons verwendet. Die HTML-Ausgabe von `display()` wird in der Reinfolge hinter den Eigenschafte (Keys) dargestellt.
+In der Bearbeitungsansicht eines Moduls generiert der modified Core die Eingabefelder für jede Eigenschaft, die mit `function keys(): array` zurückgeben wird. Weitere Eingabefelder oder Buttons wie Speichern oder Abbruch sind nicht vorhanden. Mit der `display()` Methode können beliebe Buttons oder andere beliebige HTML-Ausgaben generiert werden. Sie wird fast immer für die Ausgabe des Save-Buttons verwendet. Die HTML-Ausgabe von `display()` wird in der Reihenfolge hinter den Eigenschafte (Keys) dargestellt.
 
 
 ### custom()
@@ -392,6 +392,6 @@ public function process(string $filePath): void
 
 - Nicht bei Payment Modul-Klassen. Wahrscheinlich sogar nur bei Export und System Modulen. Muss noch geprüft werden.
 
-Wird vom modified Core aufgerufen, sobald auf im Bearbeitungsmodus auf die Taste `Save` geklickt wird, bzw. sobald die Action `save`. In diesem Fall wird als Parameter `$filePath` ??? übergeben (siehe `admin/module_export.php:136`) Mit `$_POST['process'] == 'module_processing_do'` kann verhindert werden, dass die Methode `function process(string $filePath): void` durch den Core aufgerufen wird.
+Wird vom modified Core aufgerufen, sobald auf im Bearbeitungsmodus auf die Taste `Save` geklickt wird, bzw. sobald die Action `save`. In diesem Fall wird als Parameter `$filePath` ??? übergeben (siehe `admin/module_export.php:136`). Mit `$_POST['process'] == 'module_processing_do'` kann verhindert werden, dass die Methode `function process(string $filePath): void` durch den Core aufgerufen wird.
 
 Eine alternative die Methode durch den modified Core aufrufen zu lassen ist über `?action=module_processing_d` in diesem Fall wird `$_GET['file']` an die Methode als Parameter `$filePath` übergeben.

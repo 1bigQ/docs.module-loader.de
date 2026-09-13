@@ -56,7 +56,7 @@ Eine Liste mit allen Modul Klassen und deren Methoden, die du erweitern kannst, 
 In diesem Abschnitt gehen wir auf alle Properties im Detail ein.
 
 ### $quotes
-Wird während des Checkouts von modified verwendet, um festzustellen welche der angebotenen Versandarten am günstigsten ist.
+Wird während des Checkouts von modified verwendet, um festzustellen, welche der angebotenen Versandarten am günstigsten ist.
 
 ```php
 public array $quotes = array();
@@ -88,9 +88,9 @@ public function quote(string $method = '', string $module = ''): ?ShippingQuoteA
 
 #### Beschreibung
 
-Die Methode `quote()` muss ein Array zurückliefern wenn die Methode im Checkout angezeigt werden soll. Wird ein anderer Wert (wie z. B. `null`) zurückgegeben, wird die Versandart nicht im Checkout angezeigt. Das ist nützlich wenn das Versandgewicht z. B. zu hoch für eine Versandart ist.
+Die Methode `quote()` muss ein Array zurückliefern wenn die Methode im Checkout angezeigt werden soll. Wird ein anderer Wert (wie z. B. `null`) zurückgegeben, wird die Versandart nicht im Checkout angezeigt. Das ist nützlich, wenn das Versandgewicht z. B. zu hoch für eine Versandart ist.
 
-Wir nennen den zurückgegeben Array in diesem Text `ShippingQuoteArray`. Mit diesem Array wird dem Shop mitgeteilt, wie hoch die Versandkosten für die aktuelle Bestellung (die sich im Bestellablauf befindet) ausfallen werden. Zudem können in dem Array `ShippingQuoteArray` mehrere Versandoption definiert werden. Diese nennen sich im modified-Kontext `methods`. Wir nennen einen Eintrag `ShippingQuoteMethodArray`. So könnte dem Käufer z. B. ein *Standard-Versand* und ein *Express-Versand* angeboten werden. Das Array `ShippingQuoteArray` muss mindestens ein `ShippingQuoteMethodArray` beinhalten.
+Wir nennen den zurückgegebenen Array in diesem Text `ShippingQuoteArray`. Mit diesem Array wird dem Shop mitgeteilt, wie hoch die Versandkosten für die aktuelle Bestellung (die sich im Bestellablauf befindet) ausfallen werden. Zudem können in dem Array `ShippingQuoteArray` mehrere Versandoptionen definiert werden. Diese nennen sich im modified-Kontext `methods`. Wir nennen einen Eintrag `ShippingQuoteMethodArray`. So könnte dem Käufer z. B. ein *Standard-Versand* und ein *Express-Versand* angeboten werden. Das Array `ShippingQuoteArray` muss mindestens ein `ShippingQuoteMethodArray` beinhalten.
 
 Das `ShippingQuoteMethodArray` darf keine array keys (strings) enthalten und muss aus Indizes, beginnend mit `0` bestehen.
 
@@ -173,7 +173,7 @@ public function quote(string $method = '', string $module = ''): array
 
 ### ignore_cheapest()
 
-Wählt diese Versandart **nicht** automatisch aus wenn sie die günstigste ist und _Günstigste Versandart vorauswählen_ (`CHECK_CHEAPEST_SHIPPING_MODUL`) aktiviert ist.
+Wählt diese Versandart **nicht** automatisch aus, wenn sie die günstigste ist und _Günstigste Versandart vorauswählen_ (`CHECK_CHEAPEST_SHIPPING_MODUL`) aktiviert ist.
 
 ```php
 public function ignore_cheapest(): bool
@@ -218,7 +218,7 @@ public function address(): array {
 }
 ```
 
-Es ist noch unklar welche array-keys erforderlich sind und nicht.
+Es ist noch unklar welche array-keys erforderlich sind und welche nicht.
 
 ### session()
 

@@ -1,6 +1,6 @@
 # Categories - Klassenerweiterung - Referenz
 
-Erweitert die [abtrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
+Erweitert die [abstrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
 
 ## Meta
 

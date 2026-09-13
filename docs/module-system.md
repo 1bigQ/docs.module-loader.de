@@ -22,7 +22,7 @@ Eine System Modul Klasse ist der zentrale Anker deines Moduls. Es ist eine PHP K
 
 System Module werden dir im Admininterface unter dem Menüpunkt  *Admin > Module > System Module*  aufgelistet. Dort erscheinen diese entweder als *installiert* oder *deinstalliert*.
 
-Eine System Modul Klasse basiert vom Aufbau auf eine [Abstracte Modul Klasse](/module-class-abstract/), die keine Attribute oder Methoden erweitert.
+Eine System Modul Klasse basiert vom Aufbau auf eine [Abstrakte Modul Klasse](/module-class-abstract/), die keine Attribute oder Methoden erweitert.
 
 ## Aufbau
 
@@ -64,7 +64,7 @@ Wie du sehen wirst, benötigt ein System Modul relativ viel Code. Die Schreibarb
 
 Mit dem StandardModul aus dem MMLC lässt sich dieser immer wiederkehrende Code jedoch trotzdem vermeiden. Mehr dazu später im Abschnitt [???](#). Als Erstes schauen wir uns ein System Modul ohne das StandardModul an, damit du die grundlegende Arbeitsweise von System Modulen verstehst.
 
-### Minimale Voraussetungen für eine System Modul Klasse
+### Minimale Voraussetzungen für eine System Modul Klasse
 
 Eine System Modul-Datei bzw. eine kleinst mögliche System Modul Klasse besteht mindestens aus den folgenden Elementen:
 
@@ -132,7 +132,7 @@ Das bedeutet für uns, dass wir die Klasse `system_mc_my_first_module` nennen m�
 
     Status: 2 von 5 - Erster Entwurf: Erste Ausformulierung einiger Informationen.
 
-Die Klasse benötigt 6 Attribute auf die das modified zugreift, um sich Informationen von unserer System Modul Klasse zu holen. Aus diesem Grund müssen wir die folgenden Attribute definieren. Machen wir das nicht, wirft uns PHP je nach Einstellung Notice, Warnings oder Erorrs aus. Das sollten wir vermeiden.
+Die Klasse benötigt 6 Attribute auf die das modified zugreift, um sich Informationen von unserer System Modul Klasse zu holen. Aus diesem Grund müssen wir die folgenden Attribute definieren. Machen wir das nicht, wirft uns PHP je nach Einstellung Notice, Warnings oder Errors aus. Das sollten wir vermeiden.
 
 ```php
 class system_mc_my_first_module
@@ -334,7 +334,7 @@ Den vorderen Teil der Konstanten `MODULE_SYSTEM_MC_MY_FIRST_MODULE` lassen wir u
 $prefix = 'MODULE_' . strtoupper(self::class);
 ```
 
-Die Konstanten `MODULE_SYSTEM_MC_MY_FIRST_MODULE_SORT_ORDER` und `MODULE_SYSTEM_MC_MY_FIRST_MODULE_STATUS` lädt der modifed Core für uns aus der Datenbanktabelle `configure`, bevor er versucht eine Instanz der Klasse zu erzeugen und der Constructor aufgerufen wird.
+Die Konstanten `MODULE_SYSTEM_MC_MY_FIRST_MODULE_SORT_ORDER` und `MODULE_SYSTEM_MC_MY_FIRST_MODULE_STATUS` lädt der modified Core für uns aus der Datenbanktabelle `configure`, bevor er versucht eine Instanz der Klasse zu erzeugen und der Constructor aufgerufen wird.
 
 Wie wir die Konstanten in die Datenbank bekommen, schauen wir uns auch noch an. Das passiert automatisch vom modified Core, sobald die Funktion `install()` aufgerufen wird, wie wir uns auch gleich noch anschauen werden.
 
@@ -540,11 +540,11 @@ public function process(string $filePath): void
 
     Status: 1 von 5 - Skizze: Ideen und Informationen in Stichpunkten unvollständig festgehalten.
 
-Wird vom modified Core aufgerufen, sobald auf im Bearbeitungsmodus auf die Taste `Save` geklickt wird, bzw. sobald die Action `save`. In diesem Fall wird als Parameter `$filePath` ??? übergeben (siehe `admin/module_export.php:136`) Mit `$_POST['process'] == 'module_processing_do'` kann verhindert werden, dass die Methode `function process(string $filePath): void` durch den Core aufgerufen wird.
+Wird vom modified Core aufgerufen, sobald auf im Bearbeitungsmodus auf die Taste `Save` geklickt wird, bzw. sobald die Action `save`. In diesem Fall wird als Parameter `$filePath` ??? übergeben (siehe `admin/module_export.php:136`). Mit `$_POST['process'] == 'module_processing_do'` kann verhindert werden, dass die Methode `function process(string $filePath): void` durch den Core aufgerufen wird.
 
 Eine alternative die Methode durch den modified Core aufrufen zu lassen ist über `?action=module_processing_d` in diesem Fall wird `$_GET['file']` an die Methode als Parameter `$filePath` übergeben.
 
-## Die vollstänige Beispiel Datei
+## Die vollständige Beispiel Datei
 
 ??? note "Textstatus - Skizze"
 
@@ -649,14 +649,14 @@ class system_mc_my_first_module
 - [ ] Dateiname
 - [ ] Klassen name
 - [ ] Methoden / \_constuct, init, install, keys ...
-- [ ] Configutation ohne das Stdandard-Modul / Textfelder / Dropdowns etc.
-- [ ] Access-Entries für Admin Controller-Datein
+- [ ] Configutation ohne das Standard-Modul / Textfelder / Dropdowns etc.
+- [ ] Access-Entries für Admin Controller-Dateien
 
 ??? note "Textstatus - Skizze"
 
     Status: 1 von 5 - Skizze: Ideen und Informationen in Stichpunkten unvollständig festgehalten.
 
-Hier schauen wir uns das gleiche Modul wie in dem Abschnitt [_"System Modul ohne das Stdandard-Modul"_](#) noch einmal an, wie man es mit dem Stdandard-Modul programmieren aus dem MMLC programmieren würden und wie viel weniger Code du benötigst.
+Hier schauen wir uns das gleiche Modul wie in dem Abschnitt [_"System Modul ohne das Standard-Modul"_](#) noch einmal an, wie man es mit dem Stdandard-Modul programmieren aus dem MMLC programmieren würden und wie viel weniger Code du benötigst.
 
 ```php
 <?php
@@ -674,7 +674,7 @@ class system_mc_my_first_module extends StdModul
 }
 ```
 
-Das Standard-Modul übernimmt die für uns die wichtigsten Konfigurationsarbeiten, die wir ohne das Stdandard-Modul per Hand selbst erledigen mussten. Zudem bietet uns das Stdandard-Modul nützliche Helper-Methoden, die uns die Arbeit mit System Modulen und Klassenerweiterungen erleichtern, wie wir in den nächsten Beispielen sehen werden.
+Das Standard-Modul übernimmt die für uns die wichtigsten Konfigurationsarbeiten, die wir ohne das Standard-Modul per Hand selbst erledigen mussten. Zudem bietet uns das Standard-Modul nützliche Helper-Methoden, die uns die Arbeit mit System Modulen und Klassenerweiterungen erleichtern, wie wir in den nächsten Beispielen sehen werden.
 
 Lorem ...
 
@@ -686,7 +686,7 @@ Lorem ...
 
 Jeweils das System Modul aus dem Beispiel mit dem StandardModul und ohne dem StandardModul haben wir so vorbereitet, dass es mit mehreren Sprachen funktioniert. Jetzt müssen wir die passenden Sprachdateien erstellen, damit ein System Modul in den gewünschten Sprachen angezeigt werden kann.
 
-Die Sprachdateien zu einem System Modul liegen in `/lang/<LANGUAGE>/modules/system/`. Wobei `<LANGUAGE>` der Name einer Sprache (auf englisch mit kleinem ersten Buchstabe) entspricht. Die Datei solltest du wieder nach unserer Namenskonvention aus Abschnitt XXX benennen. In diesem Fall wäre das `system_mc_my_first_module.php`.
+Die Sprachdateien zu einem System Modul liegen in `/lang/<LANGUAGE>/modules/system/`. Wobei `<LANGUAGE>` der Name einer Sprache (auf Englisch mit kleinem ersten Buchstabe) entspricht. Die Datei solltest du wieder nach unserer Namenskonvention aus Abschnitt XXX benennen. In diesem Fall wäre das `system_mc_my_first_module.php`.
 
 Wie wir das Modul in deutscher Sprache bereitstellen möchten, können wir eine PHP-Datei erstellen, die wie folgt aussieht:
 
@@ -738,7 +738,7 @@ StdModule::registerLanguage($translations, 'MC_MY_FIRST_MODULE', StdModule::TYPE
 
     Status: 1 von 5 - Skizze: Ideen und Informationen in Stichpunkten unvollständig festgehalten.
 
-Wie bereist im Abschnitt [_"Autoinclude System - Allgemeines Beispiel"_](#) beschrieben, können oder sollten Autoinclude zusmmen mit System Module arbeiten. Im Grunde möchte man, dass Autoinclude-Dateien nur einen Effekt hervorrufen, wenn ein zugehöriges System Modul einen aktiven Status hat. Der Shop-Nutzer kann im Adminbereich einstellen, welche System Module installiert und/oder aktiv sind. Es ist wünschenswert, wenn sich zugehörige Autoinclude-Dateien an diesen Wunsch des Shop-Nutzers halten. So kann der Nutzer nach seinen Bedürfnissen Module aktivieren oder deaktivieren.
+Wie bereist im Abschnitt [_"Autoinclude System - Allgemeines Beispiel"_](#) beschrieben, können oder sollten Autoinclude zusammen mit System Module arbeiten. Im Grunde möchte man, dass Autoinclude-Dateien nur einen Effekt hervorrufen, wenn ein zugehöriges System Modul einen aktiven Status hat. Der Shop-Nutzer kann im Adminbereich einstellen, welche System Module installiert und/oder aktiv sind. Es ist wünschenswert, wenn sich zugehörige Autoinclude-Dateien an diesen Wunsch des Shop-Nutzers halten. So kann der Nutzer nach seinen Bedürfnissen Module aktivieren oder deaktivieren.
 
 Das funktioniert auch bei Menü Datei-Erweiterungen siehe Abschnitt ???.
 

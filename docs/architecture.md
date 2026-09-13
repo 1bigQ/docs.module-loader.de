@@ -21,7 +21,7 @@ Die modified Shopsoftware ist in der Programmiersprache PHP geschrieben, läuft 
 
 Als Entwickler solltest du als Erstes verstehen, dass das modified System historisch aus alten PHP Konzepten gewachsen und nur an wenigen Stellen objektorientiert aufgebaut ist. Das System verwendet keine [Model View Controller Architektur](https://de.wikipedia.org/wiki/Model_View_Controller) und basiert auch nicht auf einem [typischen PHP Framework](https://kinsta.com/de/blog/php-frameworks/). modified verwendet zudem keinen [Paketmanager wie Composer](https://getcomposer.org), um externe Codebibliotheken einzubinden oder zu verwalten.
 
-Ein PHP Entwickler kann nur bedingt moderne Software- und Desingkonzepte anwenden, die mit der modernen OOP in PHP zur Verfügung stehen. Clean Code Konzepte wie [Keep it Simple, Stupid (KISS)](https://de.wikipedia.org/wiki/KISS-Prinzip), [Don't Repeat Yourself (DRY)](https://de.wikipedia.org/wiki/Don’t_repeat_yourself) oder [SOLID](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien) werden selten angewendet. [Einige Entwickler würden den Programmcode von modified daher als Spaghetticode bezeichnen](https://www.sellerforum.de/shopsysteme-f34/modified-shop-auf-version-2-0-umstellen-t45690.html?sid=d6e7b5bd897a84963d7bad50a14b9e66#p551383). Viel Code besteht aus sehr langen verschachtelten Verzweigungen mit globalen Abhängigkeiten und sich nicht selbst dokumentierenden Bezeichner. Mit einer ebenfalls sehr hohen zyklomatischen Komplexität hat das zur Folge, dass der Quellcode von modified schwer zu lesen und aus wissenschaftlicher Sicht fehleranfällig ist.
+Ein PHP Entwickler kann nur bedingt moderne Software- und Designkonzepte anwenden, die mit der modernen OOP in PHP zur Verfügung stehen. Clean Code Konzepte wie [Keep it Simple, Stupid (KISS)](https://de.wikipedia.org/wiki/KISS-Prinzip), [Don't Repeat Yourself (DRY)](https://de.wikipedia.org/wiki/Don’t_repeat_yourself) oder [SOLID](https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien) werden selten angewendet. [Einige Entwickler würden den Programmcode von modified daher als Spaghetticode bezeichnen](https://www.sellerforum.de/shopsysteme-f34/modified-shop-auf-version-2-0-umstellen-t45690.html?sid=d6e7b5bd897a84963d7bad50a14b9e66#p551383). Viel Code besteht aus sehr langen verschachtelten Verzweigungen mit globalen Abhängigkeiten und sich nicht selbst dokumentierenden Bezeichner. Mit einer ebenfalls sehr hohen zyklomatischen Komplexität hat das zur Folge, dass der Quellcode von modified schwer zu lesen und aus wissenschaftlicher Sicht fehleranfällig ist.
 
 > These studies show that code complexity, such as cyclomatic complexity, correlates with the presence of bugs in code.
 >
@@ -35,7 +35,7 @@ Das alles hat zur Folge, dass das System nur sehr schwierig bis gar nicht mit au
 
     Solltest du Lust auf ein Projekt haben, könntest du der Erste sein, der Tests für das modified System schreibt. Diese Tests solltest du unbedingt allen Entwicklern als Open Source Projekt zur Verfügung stellen.
 
-[Eine umfangreiche API, mit der man auf die Entitäten des modified Systems zugreifen kann, gibt es ebenfalls nicht](https://www.modified-shop.org/forum/index.php?topic=41259.0). Das erschwert die leichte Anbindung von Drittanbierter-Tools. Fast alle Requests werden komplett auf dem Server gerendert, wodurch der Server keine Last an den Client abgeben kann. Auch für eigene Client-Side Tools, musst du Serverseitig jedes mal einen eigenen Endpoint-Controller entwickeln.
+[Eine umfangreiche API, mit der man auf die Entitäten des modified Systems zugreifen kann, gibt es ebenfalls nicht](https://www.modified-shop.org/forum/index.php?topic=41259.0). Das erschwert die leichte Anbindung von Drittanbieter-Tools. Fast alle Requests werden komplett auf dem Server gerendert, wodurch der Server keine Last an den Client abgeben kann. Auch für eigene Client-Side Tools, musst du serverseitig jedes mal einen eigenen Endpoint-Controller entwickeln.
 
 Viele dieser Punkte lassen sich zum Teil mit der historischen Vergangenheit von modified erklären. In frühen PHP Versionen standen nur wenige objektorientierte Programmierkonzepte und keine statische Typisierung zur Verfügung.
 
@@ -61,7 +61,7 @@ Wir nennen diese Dateien in diesem Text _Include-Dateien_. Diese Include-Dateien
 
 ## Helper-Funktionen im /inc/ Verzeichnis
 
-Viele Helper-Funktionen lassen sich an fast jeder Stelle im Programmcode verwenden. Sie sind im globalen Namespace und Scope definiert. Viele dieser Helper-Funktionen befinden sich im Verzeichnis `/inc/`. Ein gelegentlicher Blick in dieses Verzeicnis lohnt sich, wenn du eine nützliche Funktion suchst.
+Viele Helper-Funktionen lassen sich an fast jeder Stelle im Programmcode verwenden. Sie sind im globalen Namespace und Scope definiert. Viele dieser Helper-Funktionen befinden sich im Verzeichnis `/inc/`. Ein gelegentlicher Blick in dieses Verzeichnis lohnt sich, wenn du eine nützliche Funktion suchst.
 
 Beispielsweise befindet sich in der Datei `/inc/xtc_get_description.inc.php` eine gleichnamige Funktion `xtc_get_description(…)`, die zu einer ProductId die zugehörige Produktbeschreibung liefert.
 

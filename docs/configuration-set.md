@@ -11,7 +11,7 @@ description: In diesem Abschnitt schauen wir uns an, was es mit der `setFunction
 
 In diesem Abschnitt schauen wir uns an, was es mit der `setFunction` auf sich hat. Mit der `setFunction` können wir eine Funktion oder Methode bestimmen, die modified aufrufen soll, wenn die Anzeige für die Bearbeitung eines Konfigurationswertes in der Eingabemaske der Konfiguration gerendert werden soll. Du kannst dir das wie folgt vorstellen. Du befindest dich im Admin unter *Module > System Module* und klickst dort bei einem Modul auf bearbeiten. Jetzt werden dir alle Werte angezeigt, die du zu diesem Modul bearbeiten kannst. Bei manchen Werten reicht ein einfaches Texteingabefeld aus. Bei anderen Werten möchten wir z. B. ein DropDownMenü oder sogar etwas noch Spezielleres anzeigen. Hier kommt jetzt die `setFunction` ins Spiel.
 
-Wie schon kurz erwähnt, können wir mit der `setFunction` eine Funktion oder Methode bestimmen, die modifed verwenden soll, um das Eingabefeld zu rendern. Diese Funktion oder Methode sollte als Rückgabe einen HTML-String liefern. Für einige Tricks kann man die `setFunction` auch dazu verwenden, um seinen eigenen HTML-Code an eine bestimmte Stelle in der Ausgabe der Konfiguration mit einfließen zu lassen. Das ist aber nicht Thema dieses Abschnitts.
+Wie schon kurz erwähnt, können wir mit der `setFunction` eine Funktion oder Methode bestimmen, die modified verwenden soll, um das Eingabefeld zu rendern. Diese Funktion oder Methode sollte als Rückgabe einen HTML-String liefern. Für einige Tricks kann man die `setFunction` auch dazu verwenden, um seinen eigenen HTML-Code an eine bestimmte Stelle in der Ausgabe der Konfiguration mit einfließen zu lassen. Das ist aber nicht Thema dieses Abschnitts.
 
 Eine `setFunction` muss über den global Scope erreichbar. Das Interface oder die Signatur einer `setFunction` muss dabei wie folgt aufgebaut sein, damit modified die `setFunction` ohne Fehler aufrufen kann:
 
@@ -48,13 +48,13 @@ echo globalFuncSelectColor('red', 'MODULE_COLOR');
 
 Wie man sieht, wurden hier die Werte `red` als `$configurationValue` und `MODULE_COLOR` als `$configurationKey` jeweils als string an die Funktion `globalFuncSelectColor()` übergeben.
 
-Jetzt wo wir verstanden haben, wie modifid die `setFunction` aufruft, können wir uns ansehen, was es mit den `...` in der Signatur auf sich hat. Da wir die `setFunction` als String in die Datenbank speichern, können wir selbst noch beliebig viele Werte an die `setFunction` anhängen. Hier ein Beispiel mit einem weiteren Wert `'hex'`:
+Jetzt wo wir verstanden haben, wie modified die `setFunction` aufruft, können wir uns ansehen, was es mit den `...` in der Signatur auf sich hat. Da wir die `setFunction` als String in die Datenbank speichern, können wir selbst noch beliebig viele Werte an die `setFunction` anhängen. Hier ein Beispiel mit einem weiteren Wert `'hex'`:
 
 | `configuration_key` | `configuration_value` | `set_function`       |
 | ------------------- | --------------------- | -------------------- |
 | `MODULE_COLOR`      | `green`               | `selectColor('hex',` |
 
-In unserem Code kann oder muss es jetzt eine Funktion im globalen Scope mit dem Name `selectColor` geben, die drei Parameter entgegennehmen kann, da modified die Funktion wie folgt anrufen wird:
+In unserem Code kann oder muss es jetzt eine Funktion im globalen Scope mit dem Namen `selectColor` geben, die drei Parameter entgegennehmen kann, da modified die Funktion wie folgt anrufen wird:
 
 ```php
 echo eval("selectColor('hex'," . "'red', 'MODULE_COLOR')");

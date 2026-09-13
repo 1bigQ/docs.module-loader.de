@@ -9,13 +9,13 @@ description: Aufbau und Programmierung von System-Modulen, Shipping-Modulen, Pay
 
     In diesem Abschnitt schauen wir uns das Konzept der Modul Klasse im modified Shop System an. Es gibt "Konkrete Modul Klassen" oder "Modul Klassenerweiterungen". Diese Modul Klassen folgen alle dem gleichen Grundaufbau, den wir als Modul Klasse in dieser Dokumentation bezeichnen. 
 
-In dieser Dokumentation führen wir eine klare Unterscheidung zwischen "Konkreten Modul Klassen" und "Modul Klassenerweiterungen" durch. Diese beiden Ansätze dienen dazu, das modifed Shop System um neue Funktionalitäten zu erweitern und individuell anzupassen.
+In dieser Dokumentation führen wir eine klare Unterscheidung zwischen "Konkreten Modul Klassen" und "Modul Klassenerweiterungen" durch. Diese beiden Ansätze dienen dazu, das modified Shop System um neue Funktionalitäten zu erweitern und individuell anzupassen.
 
 **Konkrete Modul Klassen:** Diese Art von Modul-Klassen fügt dem System spezifische Funktionalitäten hinzu, die oft in Form von Versandarten, Zahlungsmethoden oder ähnlichen Erweiterungen auftreten. Diese Klassen sind darauf ausgerichtet, bestimmte Aufgaben oder Prozesse innerhalb des Systems zu steuern und zu erweitern, und bieten somit eine gezielte Erweiterung der Shop-Funktionalität.
 
-**Modul Klassenerweiterungen:** Im Gegensatz dazu ermöglichen Modul Klassenerweiterungen die Modifikation von bereits vorhandenen PHP-Klassen in modifed, ähnlich wie es bei Hookpoints der Fall ist. Dieser Ansatz erlaubt es, bestehende Funktionalitäten anzupassen, zu erweitern oder zu verfeinern, indem spezifische Teile des Codes gezielt verändert werden. Dadurch kannst du die Flexibilität des Systems erhöhen und es an deine individuellen Anforderungen anpassen.
+**Modul Klassenerweiterungen:** Im Gegensatz dazu ermöglichen Modul Klassenerweiterungen die Modifikation von bereits vorhandenen PHP-Klassen in modified, ähnlich wie es bei Hookpoints der Fall ist. Dieser Ansatz erlaubt es, bestehende Funktionalitäten anzupassen, zu erweitern oder zu verfeinern, indem spezifische Teile des Codes gezielt verändert werden. Dadurch kannst du die Flexibilität des Systems erhöhen und es an deine individuellen Anforderungen anpassen.
 
-Die klare Unterscheidung zwischen diesen beiden Ansätzen ist entscheidend, um zu verstehen, wie du deine Modulentwicklung am besten strukturieren kannst. Je nach den Anforderungen deines Projekts kannst du entweder auf Konkrete Modul Klassen setzen, um gezielte Funktionen hinzuzufügen, oder Klassenerweiterungen verwenden, um bestehende Funktionen anzupassen und zu erweitern. Dies gibt dir die notwendige Flexibilität, um maßgeschneiderte Lösungen für deinen modifed Shop zu entwickeln.
+Die klare Unterscheidung zwischen diesen beiden Ansätzen ist entscheidend, um zu verstehen, wie du deine Modulentwicklung am besten strukturieren kannst. Je nach den Anforderungen deines Projekts kannst du entweder auf Konkrete Modul Klassen setzen, um gezielte Funktionen hinzuzufügen, oder Klassenerweiterungen verwenden, um bestehende Funktionen anzupassen und zu erweitern. Dies gibt dir die notwendige Flexibilität, um maßgeschneiderte Lösungen für deinen modified Shop zu entwickeln.
 
 ## Übersicht aller Modul Klassen
 
@@ -23,7 +23,7 @@ Im modified System gibt es eine Vielzahl von Modul Klassen, die in zwei Hauptkat
 
 ### Konkrete Modul Klassen
 
-Die Konkreten Modul Klassen sind darauf ausgerichtet, spezifische Funktionen und Erweiterungen in das modifed System einzuführen, um verschiedene Aspekte des Shops anzupassen und zu erweitern.
+Die konkreten Modul Klassen sind darauf ausgerichtet, spezifische Funktionen und Erweiterungen in das modified System einzuführen, um verschiedene Aspekte des Shops anzupassen und zu erweitern.
 
 - [System](#): Diese Klasse ermöglicht grundlegende Steuerung und Einstellungen von Modulen.
 
@@ -37,7 +37,7 @@ Die Konkreten Modul Klassen sind darauf ausgerichtet, spezifische Funktionen und
 
 ### Modul Klassenerweiterungen
 
-Modul Klassenerweiterungen hingegen konzentrieren sich darauf, bestehende PHP-Klassen in modifed anzupassen und zu erweitern, um die Funktionalität des Shops individuell anzupassen.
+Modul Klassenerweiterungen hingegen konzentrieren sich darauf, bestehende PHP-Klassen in modified anzupassen und zu erweitern, um die Funktionalität des Shops individuell anzupassen.
 
 - [Categories](#): Diese Erweiterung ermöglicht die Anpassung und Erweiterung von Kategoriefunktionen im Shop.
 
@@ -53,13 +53,13 @@ Modul Klassenerweiterungen hingegen konzentrieren sich darauf, bestehende PHP-Kl
 
 - [XtcPrice](#): Hier werden Preisberechnungen und Preisanzeigen individuell gestaltet und angepasst.
 
-Die Übersicht über diese Modul Klassen dient dir als Orientierungshilfe, um die geeignete Modul Klasse für deine spezifische Anforderungen zu finden.
+Die Übersicht über diese Modul Klassen dient dir als Orientierungshilfe, um die geeignete Modul Klasse für deine spezifischen Anforderungen zu finden.
 
-## Das allgemeine Konzept von Konkreten Modul Klassen und Modul Klassenerweiterungen
+## Das allgemeine Konzept von konkreten Modul Klassen und Modul Klassenerweiterungen
 
 Mit einer Modul Klassen lässt sich das modified Shop System erweitern. Die Modul Klassen werden vom System für unterschiedliche Aufgaben geladen. Mit ihnen können wie bereits geschrieben z. B. Verstand und Zahlungsmodule realisiert werden oder das Verhalten vom Warenkorb verändert werden. Zudem bieten sie einen Anlaufpunkt für Einstellungen, die ein User im Adminbereich zum jeweiligen Modul tätigen kann.
 
-## Der Aufabau von Modul Klassen
+## Der Aufbau von Modul Klassen
 
 ### Dateien
 
@@ -77,10 +77,10 @@ Eine Liste mit allen Modul Klassen und deren Methoden, die du erweitern kannst, 
 
 ### PHP-Datei zu Modul Klasse
 
-Eine Modul Klasse sollte genau eine PHP-Klasse enthalten. Diese Klasse muss den gleichen Namen haben (ohne .php), wie die Datei, in der sie sich befindet. Als Beispiel nehmen wir eine Datei mit dem Namen `mc_my_first_module.php`. Die entsprechende PHP-Klasse müsste also `mc_my_first_module` heißen. Das Einhalten dieser Namenskonvention ist entscheidend, da der Klassenloader im modifed Core die Datei ansonsten nicht in den Speicher lädt und die Klasse nicht verwendet werden kann.
+Eine Modul Klasse sollte genau eine PHP-Klasse enthalten. Diese Klasse muss den gleichen Namen haben (ohne .php), wie die Datei, in der sie sich befindet. Als Beispiel nehmen wir eine Datei mit dem Namen `mc_my_first_module.php`. Die entsprechende PHP-Klasse müsste also `mc_my_first_module` heißen. Das Einhalten dieser Namenskonvention ist entscheidend, da der Klassenloader im modified Core die Datei ansonsten nicht in den Speicher lädt und die Klasse nicht verwendet werden kann.
 
 !!! note "Hinweis"
-    Leider haben in modified einige Modul Klassen eigene Namenskonventionen. Schau dir dazu die Inforamtionen der jeweiligen Modul Klasse in dieser Dokumentation an.
+    Leider haben in modified einige Modul Klassen eigene Namenskonventionen. Schau dir dazu die Information der jeweiligen Modul Klasse in dieser Dokumentation an.
 
 In dieser Dokumentation zeigen wir dir zwei Ansätze zur Erstellung von Modul Klassen. Ohne und mit dem StdModul:
 
@@ -96,7 +96,7 @@ In dieser Dokumentation zeigen wir dir zwei Ansätze zur Erstellung von Modul Kl
 
 **Nachteile:**
 
-1. **Mehr Entwicklungszeit:** Da du jede Aspekt des Moduls von Grund auf neu entwickeln musst, kann dies mehr Zeit in Anspruch nehmen und die Entwicklungszeit verlängern.
+1. **Mehr Entwicklungszeit:** Da du jeden Aspekt des Moduls von Grund auf neu entwickeln musst, kann dies mehr Zeit in Anspruch nehmen und die Entwicklungszeit verlängern.
 
 2. **Potenziell komplexer Code:** Ohne die vorgefertigten Strukturen und Methoden eines Hilfsklassen-Frameworks kann der Code komplexer werden, was die Wartbarkeit und Erweiterbarkeit erschweren kann.
 
@@ -156,7 +156,7 @@ Insgesamt bietet der Ansatz "Mit StdModul" eine beschleunigte Entwicklung und ve
     }
     ```
 
-### Voraussetungen für Modul Klassen
+### Voraussetzungen für Modul Klassen
 
 Eine Modul-Datei besteht meistens aus den folgenden Elementen:
 
@@ -241,7 +241,7 @@ Den vorderen Teil der Konstanten `MODULE_MC_MY_FIRST_MODULE` lassen wir uns bequ
 $prefix = 'MODULE_' . strtoupper(self::class);
 ```
 
-Die Konstanten `MODULE_MC_MY_FIRST_MODULE_SORT_ORDER` und `MODULE_MC_MY_FIRST_MODULE_STATUS` lädt der modifed Core für uns aus der Datenbanktabelle `configure`, bevor er versucht eine Instanz der Klasse zu erzeugen und der Constructor aufgerufen wird.
+Die Konstanten `MODULE_MC_MY_FIRST_MODULE_SORT_ORDER` und `MODULE_MC_MY_FIRST_MODULE_STATUS` lädt der modified Core für uns aus der Datenbanktabelle `configure`, bevor er versucht eine Instanz der Klasse zu erzeugen und der Constructor aufgerufen wird.
 
 Wie wir die Konstanten in die Datenbank bekommen, schauen wir uns auch noch an. Das passiert automatisch vom modified Core, sobald die Funktion `install()` aufgerufen wird, wie wir uns auch gleich noch anschauen werden.
 
@@ -382,7 +382,7 @@ Wie wir die Konstanten in die Datenbank bekommen, schauen wir uns auch noch an. 
 - Der Dateiname gibt vor, wie der Klassenname ist.
 - Der Klassenname gibt vor, wie der Sprachdateiname ist.
 - Der Klassenname und Typ geben vor, wie der Name der Konfigurations-Konstante ist.
-- Achtung: Bei Shipping Modul Klassen gibt es eine Ausnahme. Diese drüfen kein `_` im Namen haben.
+- Achtung: Bei Shipping Modul Klassen gibt es eine Ausnahme. Diese dürfen kein `_` im Namen haben.
 
 
 #### snake_case
@@ -410,7 +410,7 @@ Wie wir die Konstanten in die Datenbank bekommen, schauen wir uns auch noch an. 
 | order_total |  🚫   | 🚫 | 🚫  | 🚫 |
 
 
-### Klassenerweierungen
+### Klassenerweiterungen
 
 - Der Dateiname gibt vor, wie der Klassenname ist.
 - Der Klassenname gibt vor, wie der Sprachdateiname ist.

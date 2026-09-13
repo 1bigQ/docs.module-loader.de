@@ -1,6 +1,6 @@
-# Export - Kontrekte Modul Klasse - Referenz
+# Export - Konkrete Modul Klasse - Referenz
 
-Erweitert die [abtrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
+Erweitert die [abstrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
 
 ## Meta
 

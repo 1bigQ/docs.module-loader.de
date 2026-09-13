@@ -10,13 +10,13 @@ description: Dieser Text ist keine offiziele Dokumentation des modified Projekts
     🛠 Dieser Text befindet sich in der Entwicklung und wird fortlaufend überarbeitet. Solltest du Fehler entdecken oder möchtest dich an dieser Dokumentation beteiligen, kannst du gernen einen Pull Request machen.
 
 !!! Warning "Achtung - nicht offiziell"
-    Dieser Text ist keine offiziele Dokumentation des modified Projekts. Dieser Text soll jedoch Entwicklern dabei helfen, Module für die modified Shop Software zu programmieren. Viel Spaß beim Programmieren. 🥳
+    Dieser Text ist keine offizielle Dokumentation des modified Projekts. Dieser Text soll jedoch Entwicklern dabei helfen, Module für die modified Shop Software zu programmieren. Viel Spaß beim Programmieren. 🥳
 
 ## Hilfe und Support
 
 [![dicord](https://img.shields.io/discord/727190419158597683)](https://discord.gg/9NqwJqP)
 
-Wenn du Hilfe bei der Programmierung benötigst oder dir anschauen möchtest, wie andere Entwickler ihren Code umgesetzt haben, kannst du gerne auf unseren [Discord Server - Chat & Forum](https://discord.gg/9NqwJqP) vorbeischauen. Hier kannst du auch Vorschläge machen, falls du etwas an der Dokumenation verändern oder beitragen möchtest.
+Wenn du Hilfe bei der Programmierung benötigst oder dir anschauen möchtest, wie andere Entwickler ihren Code umgesetzt haben, kannst du gerne auf unseren [Discord Server - Chat & Forum](https://discord.gg/9NqwJqP) vorbeischauen. Hier kannst du auch Vorschläge machen, falls du etwas an der Dokumentation verändern oder beitragen möchtest.
 
 ## Autoren
 

@@ -52,7 +52,7 @@ $add_contents[BOX_HEADING_TOOLS][] = [
     - Wie sollte der `boxname` gewählt werden. Namingconventions?
     - In welcher Datei sollte der Eintrag liegen und wie sollte die Datei benannt sein? Namingconventions.
 
-Beipsieldatei
+Beispieldatei
 
 ### Menü erweitern mit Configure Groups
 

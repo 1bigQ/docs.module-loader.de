@@ -1,6 +1,6 @@
-# Payment - Kontrekte Modul Klasse - Referenz
+# Payment - Konkrete Modul Klasse - Referenz
 
-Erweitert die [abtrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
+Erweitert die [abstrakte Modul Klasse](../module-class-abstract.md) um folgende Attribute und Methoden.
 
 ## Meta
 
@@ -41,9 +41,9 @@ public string $form_action_url
 ```
 <h4>Beschreibung</h4>
 
-Mit diesem Attribut kann festgelegt wedern, auf welche Seite das Form Element auf `checkout_confirmation.php`
+Mit diesem Attribut kann festgelegt werden, auf welche Seite das Formelement auf `checkout_confirmation.php`
 weiterleitet, wenn auf den "Kaufen" Button geklickt wird. Ist dieses Attribut nicht vorhanden, wird standardmäßig auf
-`checkout_process.php` weitergleitet, wo die Bestellung erstellt wird. Soll der Shop den POST-Request auf eine andere
+`checkout_process.php` weitergeleitet, wo die Bestellung erstellt wird. Soll der Shop den POST-Request auf eine andere
 Seite leiten, kann hier die Url eingetragen werden. Siehe auch `$tmpOrders`.
 
 ### $tmpOrders
@@ -85,7 +85,7 @@ public function update_status(): void
 
 <h4>Beschreibung</h4>
 
-Diese Methode wird vom System aufgerufen, um zu kontrollieren, ob die Zahlungsart (weiterhin) zur Verfügung steht. Z. B. können Bedingungen, wie Warenwert, Land, Kundenstatus etc. dazu führen, dass eine Zahlart nicht zur Verfühgung stehen soll. Oft wird dazu auf `$order` oder `$xtPrice` per `global` Statement zugegriffen. Als Ergebnis kann die Methode die Klassenvariable `$this->enabled` auf `true` oder `false` setzen.
+Diese Methode wird vom System aufgerufen, um zu kontrollieren, ob die Zahlungsart (weiterhin) zur Verfügung steht. Z. B. können Bedingungen, wie Warenwert, Land, Kundenstatus etc. dazu führen, dass eine Zahlart nicht zur Verfügung stehen soll. Oft wird dazu auf `$order` oder `$xtPrice` per `global` Statement zugegriffen. Als Ergebnis kann die Methode die Klassenvariable `$this->enabled` auf `true` oder `false` setzen.
 
 <h4>Zeitpunkt der Verwendung</h4>
 
@@ -471,7 +471,7 @@ public function javascript_validation(): string
 
 <h4>Beschreibung</h4>
 
-Diese Methode wird vom System aufgerufen, um Javascript in den Header zu laden.
+Diese Methode wird vom System aufgerufen, um JavaScript in den Header zu laden.
 
 // TODO: Die Method macht ...
 
@@ -498,7 +498,7 @@ Es sieht so aus, als würde diese Methode niemals vom modified Core aufgerufen w
 
 <h4>Zeitpunkt der Verwendung</h4>
 
-Diese Methode wird nicht vom modified Core auferufen.
+Diese Methode wird nicht vom modified Core aufgerufen.
 
 ### info()
 
