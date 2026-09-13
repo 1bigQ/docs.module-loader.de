@@ -133,8 +133,6 @@ Da sich die Anzahl der Autoincludes von Version zu Version des modified Systems 
 
 Wenn du eine IDE oder einen Code-Editor wie VS Code verwendest, in dem du global über dein gesamtes Projekt eine Suche starten kannst, bietet es sich an, nach dem Vorkommen der Zeichenkette 'auto_include' zu suchen, um alle Autoincludes in deiner modified Version zu finden.
 
-Im Wiki von modified gibt es mittlerweile ebenfalls einen Eintrag, der versucht alle Autoincludes aufzuführen [www.modified-shop.org/wiki/Auto_include_Modul_System](https://www.modified-shop.org/wiki/Auto_include_Modul_System). Falls du eine sehr neue modified Version verwendest, werden hier jedoch nicht immer ganz aktuell alle Autoincludes aufgelistet.
-
 ## Namenskonventionen von Autoinclude-Dateien
 
 ??? note "Textstatus - Entwurf"
